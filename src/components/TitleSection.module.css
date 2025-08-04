@@ -1,0 +1,19 @@
+/* ---- TITLE ----*/
+
+.container {
+    margin-left: 50px;
+    margin-top: 50px;
+}
+
+.title {
+    font-family: 'SF Pro Display';
+    font-size: 50px;
+    margin: 0;
+}
+
+.descriptionSection {
+    font-family: 'SF Pro Display';
+    font-weight: 400;
+    font-size: 18px ;
+    margin: 0;
+}
