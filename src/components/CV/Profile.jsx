@@ -2,6 +2,30 @@
 import React from 'react';
 import styles from './Profile.module.css';
 
+const icons = import.meta.glob('../../assets/Icons TS/*.png', { eager: true });
+
+const iconMap = {};
+for (const path in icons) {
+    const key = path.split('/').pop().replace('.png', '').toUpperCase();
+    iconMap[key] = icons[path].default;
+}
+
+const softIcons = import.meta.glob('../../assets/Icons SS/*.png', { eager: true });
+
+const softIconMap = {};
+for (const path in softIcons) {
+    const key = path.split('/').pop().replace('.png', '');
+    softIconMap[key] = softIcons[path].default;
+}
+
+const staticImages = import.meta.glob('../../../assets/*.{png,jpg}', { eager: true });
+
+const imageMap = {};
+for (const path in staticImages) {
+  const key = path.split('/').pop(); // 'SBP.jpg', etc.
+    imageMap[key] = staticImages[path].default;
+}
+
 function Profile() {
     return (
         <section id="inicio" className={styles.profile}>
@@ -9,7 +33,7 @@ function Profile() {
                 
                 {/*-- IMG --*/}
                 <div className={styles.profileImgContainer}>
-                    <img src="/CV/assets/SBP.jpg" className={styles.profileImg} alt="Profile" />
+                    <img src={imageMap['SBP.jpg']} className={styles.profileImg} alt="Profile" />
                 </div>
 
 
@@ -31,7 +55,7 @@ function Profile() {
                         <div className={styles.skillsWrapper}>
                             {["INGLES", "HTML", "CSS", "JS", "GIT", "GITHUB", "PYTHON", "REACT"].map(skill => (
                             <div className={styles.skillPill} key={skill}>
-                                <img src={`/CV/assets/Icons TS/${skill}.png`} alt={`${skill} icon`} className={styles.skillIcon} />
+                                <img src={iconMap[skill.toUpperCase()]} alt={`${skill} icon`} className={styles.skillIcon} />
                             {skill === 'INGLES' ? 'English – Intermediate (B1)' : skill}
                             </div>
                             ))}
@@ -44,7 +68,7 @@ function Profile() {
                             <div className={styles.skillsWrapper}>
                             {["Lider", "SOLVING", "Adaptability", "Collaboration", "Communication", "CriticalT"].map(skill => (
                             <div className={styles.skillPill} key={skill}>
-                                <img src={`/CV/assets/Icons SS/${skill}.png`} alt={`${skill} icon`} className={styles.skillIcon} />
+                                <img src={softIconMap[skill]} alt={`${skill} icon`} className={styles.skillIcon} />
                                 {skill}
                             </div>
                             ))}

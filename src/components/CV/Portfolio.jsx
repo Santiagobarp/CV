@@ -2,13 +2,21 @@
 import React from 'react';
 import styles from './Portfolio.module.css';
 
+const staticImages = import.meta.glob('../../../assets/*.{png,jpg}', { eager: true });
+
+const imageMap = {};
+for (const path in staticImages) {
+  const key = path.split('/').pop(); // 'EVOLVE.png', etc.
+    imageMap[key] = staticImages[path].default;
+}
+
 function Portfolio() { 
     return (
         <section id="proyectos" className={styles.portfolio}>
             <h2 className={styles.portfolioTitle}>Portfolio</h2>
             <div className={styles.portfolioProjectContainer}>
                 <div className={styles.portfolioProjectCard}>
-                    <img src="/CV/assets/EVOLVE.png" alt="EVOLVE" className={styles.portfolioCardImg} />
+                    <img src={imageMap['EVOLVE.png']} alt="EVOLVE" className={styles.portfolioCardImg} />
                     <div className={styles.portfolioCardContent}>
                         <h3 className={styles.portfolioCardTitle}>
                         <a href="/evolve">EVOLVE</a>

@@ -2,6 +2,14 @@
 import React from 'react'; 
 import styles from './Experience.module.css';
 
+const icons = import.meta.glob('../../../assets/Icons TS/*.{png,jpg}', { eager: true });
+
+const iconMap = {};
+for (const path in icons) {
+  const key = path.split('/').pop(); // 'EDUCATION.png', 'WORK.png', etc.
+    iconMap[key] = icons[path].default;
+}
+
 function Experience() {
     return (
         <div className={styles.profileEduExpContainer}>
@@ -9,7 +17,7 @@ function Experience() {
             {/*-- Education --*/}
             <div className={styles.profileColumn}>
                 <h2>
-                    <img src="/CV/assets/Icons TS/EDUCATION.png" alt="Education icon" className={styles.skillIcon} />
+                    <img src={iconMap['EDUCATION.png']} alt="Education icon" className={styles.skillIcon} />
                 Education
                 </h2>
                 <p className={styles.eduItem}>Instituto Tecnológico de Estudios Superiores de Occidente</p>
@@ -25,7 +33,7 @@ function Experience() {
             {/*-- Experience --*/}
             <div className={styles.profileColumn}>
                 <h2>
-                    <img src="/CV/assets/Icons TS/WORK.png" alt="Work icon" className={styles.skillIcon} />
+                    <img src={iconMap['WORK.png']} alt="Work icon" className={styles.skillIcon} />
                 Experience
                 </h2>
                 <div className={styles.experienceItem}>
