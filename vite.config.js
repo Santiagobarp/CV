@@ -1,8 +1,9 @@
 // vite.config.js
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
 
 export default defineConfig({
-  base: process.env.NODE_ENV === 'production' ? '/CV/' : '',
+  base: '/CV/', // importante para GitHub Pages
   plugins: [react()],
-})
+});
+
