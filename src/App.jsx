@@ -5,7 +5,7 @@ import Evolve from './pages/Evolve';
 function App() {
   return (
     <Routes>
-      <Route path="/" element={<CV />} />
+      <Route path="/CV" element={<CV />} />
       <Route path="/evolve" element={<Evolve />} />
     </Routes>
   );

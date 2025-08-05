@@ -1,0 +1,133 @@
+/* src/pages/CV/Profile.module.css */
+
+.profile { 
+    background-color: #f3f3f6;
+    animation: aparecer 2.4s -.6s both;
+    font-family: 'SF Pro Display', sans-serif;
+    display: flex;
+    justify-content: center;
+}
+
+.profileWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: #f3f3f6;
+    max-width: 1400px;
+    position: relative;
+}
+
+.profileImgContainer {
+    flex: 1;
+    display: flex;
+    max-width: 500px;
+    border-radius: 10px;
+    margin: 30px 10px;
+    flex-direction: column;
+    
+}
+
+.profileImg {
+    max-width: 100%;
+    border-radius: 10px;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profileDataContainer {
+    max-width: 600px;
+    padding: 40px;
+    background-color: #fff;
+    border-radius: 10px;
+    flex: 1;
+    display: flex;
+    margin: 30px 10px;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.profileData {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.profileDescription {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+}
+
+.profileDescription p {
+    margin-top: 15px;
+}
+
+.span {
+    font-weight: 500;
+    color: black;
+}
+
+.presentationName {
+    font-size: 36px;
+    margin-bottom: 2px;
+    font-weight: 600;
+}
+
+.profileSkillsContainer {
+    margin-top: 50px;
+}
+
+.skillsWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.skillPill {
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: 600;
+    background-color: #eaeaea;
+    border-radius: 8px;
+    color: #333;
+    transition: transform 0.2s;
+    white-space: nowrap;
+}
+
+.skillPill:hover {
+    transform: scale(1.05);
+}
+
+.skillIcon {
+    width: 16px;
+    height: 16px;
+    margin-right: 6px;
+}
+
+
+
+@container profile (min-width: 56.25rem) {
+.profileWrapper {
+    flex-direction: row;
+    align-items: stretch;
+    padding: 40px;
+    margin: 0 auto;
+    gap: 40px;
+}
+
+}
+
+
+/* ------ PROFILE ANIMATIONS ------- */
+@keyframes aparecer {
+from {
+    opacity: 0;
+}
+to {
+    opacity: 1;
+}
+}

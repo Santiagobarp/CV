@@ -1,0 +1,77 @@
+/* src/pages/CV/Portfolio.module.css */
+
+.portfolio {
+    background-color: #f3f3f6;
+    padding: 60px 20px;
+    text-align: left;
+    font-family: 'SF Pro Display', sans-serif;
+    margin: 50px 0;
+}
+
+.portfolioTitle {
+    font-size: 38px;
+    font-weight: 600;
+    color: #000;
+    margin-bottom: 80px;
+}
+
+.portfolioProjectContainer {
+    display: flex;
+    justify-content: center;
+    padding: 12px;
+}
+
+.portfolioProjectCard {
+    position: relative;
+    max-width: 600px;
+    width: 100%;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    background-color: #fff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #e0e0e0;
+}
+
+.portfolioProjectCard:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.1);
+}
+
+.portfolioCardImg {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.portfolioCardContent {
+    width: 100%;
+    padding: 2rem;
+    text-align: left;
+    background: #f0efeb;
+}
+
+.portfolioCardTitle {
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0 0 8px;
+}
+
+.portfolioCardTitle a {
+    text-decoration: none;
+    color: #111;
+}
+
+.portfolioCardTitle a:hover {
+    text-decoration: underline;
+}
+
+.portfolioCardDescription {
+    font-size: 16px;
+    color: #444;
+    line-height: 1.6;
+    font-weight: 400;
+}

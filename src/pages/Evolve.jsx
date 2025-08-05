@@ -1,11 +1,11 @@
 import { useState } from 'react';  
 import styles from './Evolve.module.css';
-import Header from '../components/Header';
-import ViewNav from '../components/ViewNav';
-import TitleSection from '../components/TitleSection';
-import SubtitleSection from '../components/SubtitleSection';
-import GridContainer from '../components/GridContainer';
-import Modal from '../components/Modal';
+import Header from '../components/EVOLVE/Header';
+import ViewNav from '../components/EVOLVE/ViewNav';
+import TitleSection from '../components/EVOLVE/TitleSection';
+import SubtitleSection from '../components/EVOLVE/SubtitleSection';
+import GridContainer from '../components/EVOLVE/GridContainer';
+import Modal from '../components/EVOLVE/Modal';
 
 function Evolve() {
   const [items, setItems] = useState([]);
