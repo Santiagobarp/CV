@@ -2,7 +2,7 @@
 import React from 'react';
 import styles from './Profile.module.css';
 
-const icons = import.meta.glob('../../assets/Icons TS/*.png', { eager: true });
+const icons = import.meta.glob('/src/assets/Icons TS/*.png', { eager: true });
 
 const iconMap = {};
 for (const path in icons) {
@@ -10,7 +10,7 @@ for (const path in icons) {
     iconMap[key] = icons[path].default;
 }
 
-const softIcons = import.meta.glob('../../assets/Icons SS/*.png', { eager: true });
+const softIcons = import.meta.glob('/src/assets/Icons SS/*.png', { eager: true });
 
 const softIconMap = {};
 for (const path in softIcons) {
@@ -18,7 +18,8 @@ for (const path in softIcons) {
     softIconMap[key] = softIcons[path].default;
 }
 
-const staticImages = import.meta.glob('../../../assets/*.{png,jpg}', { eager: true });
+const staticImages = import.meta.glob('/src/assets/*.{png,jpg}', { eager: true });
+
 
 const imageMap = {};
 for (const path in staticImages) {

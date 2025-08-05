@@ -2,7 +2,7 @@
 import React from 'react';
 import styles from './Portfolio.module.css';
 
-const staticImages = import.meta.glob('../../../assets/*.{png,jpg}', { eager: true });
+const staticImages = import.meta.glob('/src/assets/*.{png,jpg}', { eager: true });
 
 const imageMap = {};
 for (const path in staticImages) {
