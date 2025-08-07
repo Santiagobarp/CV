@@ -2,6 +2,10 @@
 
 /* ----- HEADER SECTION ------ */
 
+.sectionOffset {
+    scroll-margin-top: 800px;
+}
+
 .header {
     background-color: #fff;
     display: flex;

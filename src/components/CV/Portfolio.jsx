@@ -1,6 +1,7 @@
 // src/pages/CV/Portfolio.jsx
 import React from 'react';
 import styles from './Portfolio.module.css';
+import { Link } from 'react-router-dom'; 
 
 const staticImages = import.meta.glob('/src/assets/*.{png,jpg}', { eager: true });
 
@@ -19,10 +20,10 @@ function Portfolio() {
                     <img src={imageMap['EVOLVE.png']} alt="EVOLVE" className={styles.portfolioCardImg} />
                     <div className={styles.portfolioCardContent}>
                         <h3 className={styles.portfolioCardTitle}>
-                        <a href="/evolve">EVOLVE</a>
+                            <Link to="/evolve">EVOLVE</Link>
                         </h3>
                         <p className={styles.portfolioCardDescription}>
-                        Habit tracker for personal growth
+                            Habit tracker for personal growth
                         </p>
                     </div>
                 </div>
@@ -32,3 +33,4 @@ function Portfolio() {
 }
 
 export default Portfolio;
+

@@ -29,7 +29,7 @@ for (const path in staticImages) {
 
 function Profile() {
     return (
-        <section id="inicio" className={styles.profile}>
+        <section id="inicio" className={`${styles.profile} ${styles.sectionOffset}`}>
             <div className={styles.profileWrapper}>
                 
                 {/*-- IMG --*/}

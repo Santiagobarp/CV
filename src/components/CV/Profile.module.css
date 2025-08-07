@@ -1,4 +1,7 @@
 /* src/pages/CV/Profile.module.css */
+.sectionOffset {
+    scroll-margin-top: 60px;
+}
 
 .profile { 
     background-color: #f3f3f6;

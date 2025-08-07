@@ -5,7 +5,7 @@ import styles from './ContactForm.module.css';
 function ContactForm() {
     return (
         <>
-        <h2 id="contacto" className={styles.formTitle}>Let's work together.</h2>
+        <h2 id="contacto" className={`${styles.formTitle} ${styles.sectionOffset}`}>Let's work together.</h2>
         <section className={styles.form}>
             <form>
                 <h3 className={styles.formSection}>Contact Information.</h3>
