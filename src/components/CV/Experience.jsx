@@ -2,7 +2,7 @@
 import React from 'react'; 
 import styles from './Experience.module.css';
 
-const icons = import.meta.glob('/src/assets/Icons TS/*.png', { eager: true });
+const icons = import.meta.glob('@/assets/Icons TS/*.png', { eager: true });
 
 const iconMap = {};
 for (const path in icons) {
